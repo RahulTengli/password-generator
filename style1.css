@@ -1,0 +1,221 @@
+*,*::before,::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:cursive
+}
+
+body{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* place-content: center; */
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(44deg, rgba(69, 149, 220, 1) 0%, rgba(10, 10, 56, 1) 89%) ;
+}
+
+.container{
+    width:450px;
+    height: auto;
+    /* text-align: center; */
+}
+h1{
+    font-size:xx-large;
+    color: white;
+    opacity: 75%;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.display-container{
+    position:relative;
+    background-color:rgb(32, 53, 70)  ;
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid  rgb(114, 133, 149);
+    /* border-left: 0.35rem solid  rgb(114, 133, 149); */
+    margin: 1rem 0;
+    padding-top:0.35rem ;
+    outline:none;
+}
+
+.display{
+    width:100%;
+    background-color: transparent;
+    padding: 1.15rem 1rem;
+    color: gold;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+    border: none;
+}
+.display::placeholder{
+    top:50%;
+    left:1.5rem;
+    font-size: 1.5rem;
+    line-height: 30px;
+    opacity: 65%;
+    text-transform: uppercase;
+    color: goldenrod;
+}
+.display-container button{
+    position: absolute;
+    top:50%;
+    right: 1rem;
+    transform: translatey(-50%);
+
+}
+
+.copyBtn{
+    background-color: transparent;
+    border:none;
+    outline: none;
+}
+
+.copytext{
+    color: yellow;
+    position: absolute;
+    background-color:rgb(58, 115, 164) ;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    top:-35px;
+    left:-25px;
+    padding: 5px 10px ;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+
+}
+
+.copytext.active{
+    opacity: 1;
+    transform: scale(1);
+
+}
+
+.input-container{
+    width: 100%;
+    border-bottom: 0.35rem solid  rgb(114, 133, 149);
+    /* border-left: 0.35rem solid  rgb(114, 133, 149); */
+    padding:2rem;
+    background-color:rgb(32, 53, 70)  ;
+    border-radius: 1rem;
+} 
+
+.length-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.length-container p:nth-child(1){
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 0.7px;
+
+}
+.length-container p:nth-child(2){
+    color: yellow;
+    font-size: 1.5rem;
+}
+.strength-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.strength-container p{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.indicator{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.generateButton{
+    width:100%;
+    padding: 1rem 0;
+    background-color:rgb(58, 115, 164) ;
+    border-radius: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: yellow;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin:1rem 0;
+    border-bottom: 0.35rem solid  rgb(114, 133, 149);
+    cursor: pointer;
+}
+
+.check{
+    display: flex;
+    align-items: center;
+    color:white;
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+    gap:0 1rem;
+    letter-spacing: 0.7px;
+}
+
+.check input{
+    appearance: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border: 1px solid aquamarine;
+    border-radius: 35%;
+    position: relative;
+}
+ 
+.check input:checked{
+    background-color: aquamarine;
+}
+
+.check input:checked::before{
+    content:'✔ ';
+    position: absolute;
+    color:rgb(32, 53, 70)  ;
+    font-size: 1.5rem;
+    font-weight: 600;
+    top:-8px;
+
+}
+
+.slider{
+    width: 100%;
+    appearance: none;
+    margin-top: 2rem ;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    background-color:rgb(58, 115, 164) ;
+    height: 10px;
+
+}
+
+.slider::-webkit-slider-thumb{
+    /* scale: 1.5; */
+    appearance: none;
+    height:1.5rem;
+    width:1.5rem;
+    background-color: yellow;
+    cursor: pointer;
+    border-radius:50%;  
+    box-shadow: 0px 0px 20px 2px rgba(255 ,229,61,0.50);
+    transition: all 100ms ease-in;
+}
+.slider::-webkit-slider-thumb:hover{
+
+    background-color:rgb(32, 53, 70);
+}
